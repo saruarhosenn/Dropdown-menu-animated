@@ -1,0 +1,65 @@
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: monospace;
+	list-style: none;
+}
+
+nav {
+	padding: 10px 15px;
+	background: #212121;
+}
+
+.main-menu {
+	text-align: center;
+}
+
+.main-menu > li {
+	display: inline-block;
+}
+
+.main-menu li:not(:last-child) {
+	margin-right: 20px;
+}
+
+.main-menu li:nth-child(2) {
+	position: relative;
+}
+
+.main-menu li a {
+	display: block;
+	font-size: 20px;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+.main-menu > li > a {
+	padding: 20px 0;
+}
+
+.dropdown-menu {
+	text-align: left;
+	background: #04AA6D;
+	transition: all 0.3s ease-in-out 0s;
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	transform: rotateX(90deg) translateX(-50%);
+	padding: 30px;
+	min-width: 280px;
+	overflow: hidden;
+	z-index: 99;
+	transform-origin: 50% 0 0;
+}
+
+.dropdown-menu li:not(:last-child) {
+	margin-bottom: 15px;
+}
+
+.main-menu li:nth-child(2):hover .dropdown-menu {
+	overflow: visible;
+	transform: rotateX(0) translateX(-50%);
+}
